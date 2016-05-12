@@ -21,7 +21,7 @@ gulp.task('sass', function() {
     }}))
     .pipe(sass({indentedSyntax: true}).on('error', util.log))
     .pipe(concat("application.css"))
-    .pipe(gulp.dest('./dist/css'))
+    .pipe(gulp.dest('./app/css'))
     .pipe(browserSync.reload({stream:true}))
 });
 
@@ -33,7 +33,7 @@ gulp.task('pug', function() {
         this.emit("end");
     }}))
     .pipe(pug({pretty: true}).on('error', util.log))
-    .pipe(gulp.dest('./dist/'))
+    .pipe(gulp.dest('./app/'))
     .pipe(browserSync.reload({stream:true}))
 });
 
@@ -47,7 +47,7 @@ gulp.task('image', function () {
   .pipe(imagemin({
     progressive: true
   }))
-  .pipe(gulp.dest('./dist/img/'))
+  .pipe(gulp.dest('./app/img/'))
   .pipe(browserSync.reload({stream:true}))
 });
 
@@ -59,17 +59,17 @@ gulp.task('js', function () {
         this.emit("end");
     }}))
     .pipe(concat("application.js"))
-    .pipe(gulp.dest('./dist/js'))
+    .pipe(gulp.dest('./app/js'))
     .pipe(rename("application.min.js"))
     .pipe(uglify())
-    .pipe(gulp.dest("./dist/js"))
+    .pipe(gulp.dest("./app/js"))
     .pipe(browserSync.reload({stream:true}))
 });
 
 gulp.task('serve', function() {
   browserSync.init({
     server: {
-      baseDir: "./dist/"
+      baseDir: "./app/"
     }
   });
   gulp.watch('./src/sass/**/*.sass', ['sass']);

@@ -1,0 +1,25 @@
+{
+  "name": "tokenly-music",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Adam Raider"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/adamraider/tokenly-music",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-animate": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "jquery": "^2.2.3",
+    "angularjs-slider": "^2.13.0"
+  }
+}

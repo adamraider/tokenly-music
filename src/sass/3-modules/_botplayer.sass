@@ -29,12 +29,30 @@ $height: 64px
     float: left
     .playpause
       font-size: 40px
+    .song-timeline
+      margin-left: 20px
+      line-height: $height
+      float: right
+      .time
+        display: inline-block
+      .song-slider-wrapper
+        margin: 0 15px
+        display: inline-block
+        width: 500px
+
   .song-controls
     float: right
     color: $gray-lighter
   .volume-controls
     float: right
-    margin-right: 20px
+    margin-right: 40px
+    .vol-slider-wrapper
+      display: inline-block
+      width: 100px
+  rzslider
+    margin: 0
+    .rz-pointer
+      display: none
   .song-navigation
     float: right
     ul

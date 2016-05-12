@@ -16,28 +16,9 @@
           span My Tokens
     .menu.playlist-menu
       .menu-label Playlists
-      ul
-        li: a(href="/playlist.html") Focus
-        li: a(href="/playlist.html") Workout
-        li: a(href="/playlist.html") Party
+      ul(ng-repeat="playlist in playlists")
+        li: a(href="") {{ playlist.name }}
     .menu.genres-menu
       .menu-label Genres
-      ul
-        li: a(href="") Focus
-        li: a(href="") Workout
-        li: a(href="") Party
-        li: a(href="") Focus
-        li: a(href="") Workout
-        li: a(href="") Party
-        li: a(href="") Focus
-        li: a(href="") Workout
-        li: a(href="") Party
-        li: a(href="") Focus
-        li: a(href="") Workout
-        li: a(href="") Party
-        li: a(href="") Focus
-        li: a(href="") Workout
-        li: a(href="") Party
-        li: a(href="") Focus
-        li: a(href="") Workout
-        li: a(href="") Party
+      ul(ng-repeat="genre in genres")
+        li: a(href="") {{ genre.name }}

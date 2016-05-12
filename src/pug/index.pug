@@ -2,14 +2,14 @@ doctype html
 html(lang="en")
   head
     include partials/_head
-  body
+  body(ng-app="app" ng-controller="MainController")
     include partials/_botplayer
     include partials/_sidebar
     .content-wrapper.with-side-nav
       include partials/_topbar
       .page-information
-        span.page-heading My Music
-        span.page-subheading Adam's Collection
+        span.page-heading {{ page.title }}
+        span.page-subheading {{ page.subtitle }}
       .content.with-gutter
         table
           thead
@@ -21,154 +21,11 @@ html(lang="en")
               th Length
               th Tokens
           tbody
-            tr
-              td.muted 1
-              td Raise Your Weapon
-              td Deadmau5
-              td 4x4=12
-              td.muted 8:42
-              td.muted Deadmau5 Pack
-            tr
-              td.muted 1
-              td Raise Your Weapon
-              td Deadmau5
-              td 4x4=12
-              td.muted 8:42
-              td.muted Deadmau5 Pack
-            tr
-              td.muted 1
-              td Raise Your Weapon
-              td Deadmau5
-              td 4x4=12
-              td.muted 8:42
-              td.muted Deadmau5 Pack
-            tr
-              td.muted 1
-              td Raise Your Weapon
-              td Deadmau5
-              td 4x4=12
-              td.muted 8:42
-              td.muted Deadmau5 Pack
-            tr
-              td.muted 1
-              td Raise Your Weapon
-              td Deadmau5
-              td 4x4=12
-              td.muted 8:42
-              td.muted Deadmau5 Pack
-            tr
-              td.muted 1
-              td Raise Your Weapon
-              td Deadmau5
-              td 4x4=12
-              td.muted 8:42
-              td.muted Deadmau5 Pack
-            tr
-              td.muted 1
-              td Raise Your Weapon
-              td Deadmau5
-              td 4x4=12
-              td.muted 8:42
-              td.muted Deadmau5 Pack
-            tr
-              td.muted 1
-              td Raise Your Weapon
-              td Deadmau5
-              td 4x4=12
-              td.muted 8:42
-              td.muted Deadmau5 Pack
-            tr
-              td.muted 1
-              td Raise Your Weapon
-              td Deadmau5
-              td 4x4=12
-              td.muted 8:42
-              td.muted Deadmau5 Pack
-            tr
-              td.muted 1
-              td Raise Your Weapon
-              td Deadmau5
-              td 4x4=12
-              td.muted 8:42
-              td.muted Deadmau5 Pack
-            tr
-              td.muted 1
-              td Raise Your Weapon
-              td Deadmau5
-              td 4x4=12
-              td.muted 8:42
-              td.muted Deadmau5 Pack
-            tr
-              td.muted 1
-              td Raise Your Weapon
-              td Deadmau5
-              td 4x4=12
-              td.muted 8:42
-              td.muted Deadmau5 Pack
-            tr
-              td.muted 1
-              td Raise Your Weapon
-              td Deadmau5
-              td 4x4=12
-              td.muted 8:42
-              td.muted Deadmau5 Pack
-            tr
-              td.muted 1
-              td Raise Your Weapon
-              td Deadmau5
-              td 4x4=12
-              td.muted 8:42
-              td.muted Deadmau5 Pack
-            tr
-              td.muted 1
-              td Raise Your Weapon
-              td Deadmau5
-              td 4x4=12
-              td.muted 8:42
-              td.muted Deadmau5 Pack
-            tr
-              td.muted 1
-              td Raise Your Weapon
-              td Deadmau5
-              td 4x4=12
-              td.muted 8:42
-              td.muted Deadmau5 Pack
-            tr
-              td.muted 1
-              td Raise Your Weapon
-              td Deadmau5
-              td 4x4=12
-              td.muted 8:42
-              td.muted Deadmau5 Pack
-            tr
-              td.muted 1
-              td Raise Your Weapon
-              td Deadmau5
-              td 4x4=12
-              td.muted 8:42
-              td.muted Deadmau5 Pack
-            tr
-              td.muted 1
-              td Raise Your Weapon
-              td Deadmau5
-              td 4x4=12
-              td.muted 8:42
-              td.muted Deadmau5 Pack
-            tr
-              td.muted 1
-              td Raise Your Weapon
-              td Deadmau5
-              td 4x4=12
-              td.muted 8:42
-              td.muted Deadmau5 Pack
-            tr
-              td.muted 1
-              td Raise Your Weapon
-              td Deadmau5
-              td 4x4=12
-              td.muted 8:42
-              td.muted Deadmau5 Pack
-
+            tr(ng-repeat="song in songs")
+              td.muted {{ song.id }}
+              td {{ song.name }}
+              td {{ song.artist }}
+              td {{ song.album }}
+              td.muted {{ song.length }}
+              td.muted {{ song.tokens }}
     .clearfix
-    script(src="https://code.jquery.com/jquery-2.1.4.min.js")
-    script(src="/js/script.js")

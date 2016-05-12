@@ -8,8 +8,16 @@
     i.material-icons fast_rewind
     i.playpause.material-icons pause_circle_outline
     i.material-icons fast_forward
+    .song-timeline
+      span.time.time-min 0:00
+      .song-slider-wrapper
+        rzslider(rz-slider-model="songSlider.value" rz-slider-options="songSlider.options")
+      span.time.time-max 5:28
   .volume-controls
     i.material-icons volume_up
+    .vol-slider-wrapper
+      rzslider(rz-slider-model="volSlider.value" rz-slider-options="volSlider.options")
+
   .song-navigation
     ul
       li: a(href="#") Tokens
