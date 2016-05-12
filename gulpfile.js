@@ -1,5 +1,3 @@
-'use strict'
-
 var gulp = require('gulp');
 var util = require('gulp-util');
 var sass = require('gulp-sass');
@@ -76,7 +74,7 @@ gulp.task('serve', function() {
   });
   gulp.watch('./src/sass/**/*.sass', ['sass']);
   gulp.watch('./src/sass/**/*.scss', ['sass']);
-  gulp.watch('./src/pug/**/*.pug', ['pug']);
+  gulp.watch('./src/pug/**/**', ['pug']);
   gulp.watch('./src/img/**/**', ['image']);
   gulp.watch('./src/js/**/*.js', ['js']);
 });

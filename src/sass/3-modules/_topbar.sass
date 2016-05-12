@@ -1,0 +1,43 @@
+$topbar-height: 90px
+$gutter: 40px
+.topbar
+  left: 200px
+  height: $topbar-height
+  background-color: $white
+  color: $gray-dark
+  font-size: 18px
+  line-height: $topbar-height
+  .search
+    position: relative
+    $search-height: 38px
+    float: left
+    margin-top: 26px
+    margin-left: $gutter
+    border: 1px solid $gray-lightest
+    width: 450px
+    height: $search-height
+    border-radius: 8px
+    .icon
+      color: $gray-dark
+      float: left
+      text-align: center
+      width: 15%
+      height: $search-height
+      line-height: $search-height
+      .material-icons
+        line-height: $search-height
+    input
+      box-sizing: border-box
+      padding: 0 30px 0 0
+      float: left
+      border: none
+      outline: none
+      font-size: 15px
+      width: 85%
+      line-height: $search-height
+      background-color: transparent
+
+  .user-information
+    float: right
+    margin-right: $gutter
+    line-height: $topbar-height

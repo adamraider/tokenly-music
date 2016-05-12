@@ -1,0 +1,48 @@
+.sidebar
+  overflow-y: scroll
+  z-index: 100
+  position: fixed
+  height: 100vh
+  top: 0
+  left: 0
+  width: $sidebar-width
+  background-color: $gray-dark
+  &::-webkit-scrollbar
+    display: none
+  .logo-wrapper
+    margin: 20px 0 20px 0
+    .logo
+      font-size: 36px
+      color: $white
+      text-align: center
+  .primary-navigation
+    $gutter: 27px
+    .main-menu
+      ul li 
+        a
+          font-size: 20px
+          margin-bottom: 8px
+          .icon
+            line-height: 30px
+            padding-right: 16px
+            vertical-align: middle
+    .menu
+      margin-bottom: 40px
+      .menu-label
+        text-transform: uppercase
+        font-weight: bold
+        margin: 0 $gutter
+        margin-bottom: 10px
+      ul
+        margin: 0
+        padding: 0
+        li
+          font-size: 18px
+          line-height: 30px
+          list-style-type: none
+          a
+            color: $gray-lighter
+            padding: 0 $gutter
+            display: block
+            &:hover, &:focus
+              color: $white

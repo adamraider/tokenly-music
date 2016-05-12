@@ -1,0 +1,28 @@
+$gutter: 40px
+.content-wrapper
+  position: absolute
+  top: 0
+  right: 0
+  margin-bottom: 40px
+  box-sizing: border-box
+  &.with-side-nav
+    // Subtracts the width of the sidebar from the parent width.
+    width: calc(100% - #{$sidebar-width})
+    float: right
+    overflow: auto
+  .page-information
+    margin: 40px $gutter
+    .page-heading
+      display: block
+      font-size: 32px
+      color: $gray
+    .page-subheading
+      display: block
+      font-size: 16px
+  .content
+    &.with-gutter
+      margin-left: $gutter
+      margin-right: $gutter
+.clearfix
+  content: ""
+  clear: both
