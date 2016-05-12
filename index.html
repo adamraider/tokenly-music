@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tokenly Music</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="/bower_components/angularjs-slider/dist/rzslider.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/application.css">
-    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/bower_components/angular/angular.min.js"></script>
-    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
-    <script src="/bower_components/angular-route/angular-route.min.js"></script>
-    <script src="/bower_components/angularjs-slider/dist/rzslider.min.js"></script>
-    <script src="/js/application.js"></script>
+    <link href="./bower_components/angularjs-slider/dist/rzslider.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/application.css">
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./bower_components/angular/angular.min.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="./bower_components/angular-route/angular-route.min.js"></script>
+    <script src="./bower_components/angularjs-slider/dist/rzslider.min.js"></script>
+    <script src="./js/application.js"></script>
   </head>
   <body ng-app="app" ng-controller="MainController">
     <div class="botplayer">
@@ -93,7 +93,7 @@
               <td>{{ song.artist }}</td>
               <td>{{ song.album }}</td>
               <td class="muted">{{ song.length }}</td>
-              <td class="muted">{{ to_sentence(song.tokens) }}</td>
+              <td class="muted">{{ song.tokens }}</td>
             </tr>
           </tbody>
         </table>
