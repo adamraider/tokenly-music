@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tokenly Music</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/bower_components/angularjs-slider/dist/rzslider.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/application.css">
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="/bower_components/angularjs-slider/dist/rzslider.min.js"></script>
+    <script src="/js/application.js"></script>
+  </head>
+  <body ng-app="app" ng-controller="MainController">
+    <div class="botplayer">
+      <div class="album-art-wrapper"><img src=""></div>
+      <div class="song-information"><span class="title">Robot Jazz</span><span class="artist">Toothless Hawkins</span></div>
+      <div class="audio-controls"><i class="material-icons">fast_rewind</i><i class="playpause material-icons">pause_circle_outline</i><i class="material-icons">fast_forward</i>
+        <div class="song-timeline"><span class="time time-min">0:00</span>
+          <div class="song-slider-wrapper">
+            <rzslider rz-slider-model="songSlider.value" rz-slider-options="songSlider.options"></rzslider>
+          </div><span class="time time-max">5:28</span>
+        </div>
+      </div>
+      <div class="volume-controls"><i class="material-icons">volume_up</i>
+        <div class="vol-slider-wrapper">
+          <rzslider rz-slider-model="volSlider.value" rz-slider-options="volSlider.options"></rzslider>
+        </div>
+      </div>
+      <div class="song-navigation">
+        <ul>
+          <li><a href="#">Tokens</a></li>
+          <li><a href="#">Share</a></li>
+        </ul>
+      </div>
+      <div class="song-controls"><i class="material-icons">loop</i><i class="material-icons">shuffle</i></div>
+    </div>
+    <div class="sidebar">
+      <div class="logo-wrapper">
+        <div class="logo">tokenly<strong>music</strong></div>
+      </div>
+      <div class="primary-navigation">
+        <div class="menu main-menu">
+          <div class="menu-label">Main</div>
+          <ul>
+            <li><a href="/browse.html"><i class="icon material-icons">featured_play_list</i><span>Browse</span></a></li>
+            <li><a href="/"><i class="icon material-icons">library_music</i><span>My Music</span></a></li>
+            <li><a href=""><i class="icon material-icons">toll</i><span>My Tokens</span></a></li>
+          </ul>
+        </div>
+        <div class="menu playlist-menu">
+          <div class="menu-label">Playlists</div>
+          <ul ng-repeat="playlist in playlists">
+            <li><a href="">{{ playlist.name }}</a></li>
+          </ul>
+        </div>
+        <div class="menu genres-menu">
+          <div class="menu-label">Genres</div>
+          <ul ng-repeat="genre in genres">
+            <li><a href="">{{ genre.name }}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content-wrapper with-side-nav">
+      <div class="topbar">
+        <div class="search">
+          <div class="icon"><i class="material-icons">search</i></div>
+          <input type="text" placeholder="Search for a song, artist or token...">
+        </div>
+        <div class="user-information"><span>signed in as <a href=""><strong>adamraider</strong></a></span></div>
+      </div>
+      <div class="page-information"><span class="page-heading">{{ page.title }}</span><span class="page-subheading">{{ page.subtitle }}</span></div>
+      <div class="content with-gutter">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Song</th>
+              <th>Artist</th>
+              <th>Album</th>
+              <th>Length</th>
+              <th>Tokens</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="song in songs">
+              <td class="muted">{{ song.id }}</td>
+              <td>{{ song.name }}</td>
+              <td>{{ song.artist }}</td>
+              <td>{{ song.album }}</td>
+              <td class="muted">{{ song.length }}</td>
+              <td class="muted">{{ to_sentence(song.tokens) }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </body>
+</html>
