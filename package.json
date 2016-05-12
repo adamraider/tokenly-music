@@ -1,0 +1,23 @@
+{
+  "name": "TokenlyMusic",
+  "version": "0.1.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/adamraider/tokenly-music"
+  },
+  "author": "Adam Raider",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.6.9",
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-plumber": "^1.0.1",
+    "gulp-pug": "^3.0.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.4"
+  }
+}
