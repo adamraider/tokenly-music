@@ -7,7 +7,6 @@ app.controller('MainController', function($scope) {
     };
     $scope.songs = [
       {
-        id: '1',
         name: 'Home',
         artist: 'Madeon',
         album: 'Adventure',
@@ -15,7 +14,6 @@ app.controller('MainController', function($scope) {
         tokens: ['Adventure Album', 'Madeon Discog']
       },
       {
-        id: '2',
         name: 'Icarus',
         artist: 'Madeon',
         album: 'Adventure',
@@ -23,7 +21,6 @@ app.controller('MainController', function($scope) {
         tokens: ['Adventure Album', 'Madeon Discog']
       },
       {
-        id: '3',
         name: 'You\'re On',
         artist: 'Madeon',
         album: 'Adventure',
@@ -31,7 +28,6 @@ app.controller('MainController', function($scope) {
         tokens: ['Adventure Album', 'Madeon Discog']
       },
       {
-        id: '4',
         name: 'Finale',
         artist: 'Madeon',
         album: 'Adventure',
