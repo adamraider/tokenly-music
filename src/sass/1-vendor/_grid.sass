@@ -1,0 +1,35 @@
+*
+  box-sizing: border-box
+
+img
+  width: auto
+  max-width: 100%
+  height: auto !important 
+
+.container, .fluid-container
+  width: 100%
+  margin: 0 auto
+
+.container, .fluid-container, .row
+  *zoom: 1
+  &:before, 
+  &:after
+    content: " "
+    display: table
+  &:after
+    clear: both
+
+[class*='col-']
+  float: left
+  padding: 1em
+  width: 100%
+  min-height: 1px
+
+@media #{$breakpoint-medium}
+  .container
+    width: 95%
+    max-width: $grid-max-width
+      
+  @for $i from 1 through $grid-columns
+    .col-#{$i}
+      width: 100% / $grid-columns * $i

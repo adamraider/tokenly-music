@@ -8,8 +8,20 @@ html(lang="en")
     .content-wrapper.with-side-nav
       include partials/_topbar
       .page-information
-        span.page-heading {{ page.title }}
-        span.page-subheading {{ page.subtitle }}
+        .fluid-container
+          .col-6
+            .row
+              span.page-heading {{ page.title }}
+              .play-button
+                i.material-icons play_circle_outline
+                span Play
+            .row
+              span.page-subheading {{ page.subtitle }}
+          .col-6.text-right
+            .row
+              span.page-subheading {{ songs.length }} songs
+
+
       .content.with-gutter
         table
           thead
@@ -22,10 +34,17 @@ html(lang="en")
               th Tokens
           tbody
             tr(ng-repeat="song in songs")
-              td.muted {{ song.id }}
+              td.muted {{ ($index + 1) }}
               td {{ song.name }}
               td {{ song.artist }}
               td {{ song.album }}
               td.muted {{ song.length }}
               td.muted {{ to_sentence(song.tokens) }}
+            tr
+              td: a(href="#"): i.material-icons lock
+              td.muted Strangers
+              td.muted Seven Lions
+              td.muted Strangers (Single)
+              td.muted 5:61
+              td: a(href="#") CLICK TO UNLOCK
     .clearfix
